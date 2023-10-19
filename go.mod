@@ -1,3 +1,3 @@
-module interpreter.com/go/monkey
+module monkey
 
 go 1.21.3
