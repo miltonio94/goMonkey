@@ -1,7 +1,6 @@
 package main
 
 import (
-	"monkey//ast"
 	"monkey/ast"
 	"monkey/lexer"
 	"testing"
@@ -22,7 +21,7 @@ let foobar = 838383;
 	if program == nil {
 		t.Fatalf("ParseProgram() returned nil")
 	}
-	if len(program.Statements != 3) {
+	if len(program.Statements) != 3 {
 		t.Fatalf("program.Statements does not contain 3 statements. got=%d", len(program.Statements))
 	}
 
@@ -56,12 +55,12 @@ func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
 	}
 
 	if letStmt.Name.Value != name {
-		t.Errorf("letStmt.Name.Value not %s. got=%s", name, &letStmt.Name.Value)
+		t.Errorf("letStmt.Name.Value not %s. got=%s", name, letStmt.Name.Value)
 		return false
 	}
 
 	if letStmt.Name.TokenLiteral() != name {
-		t.Errorf("s.Name not %5. got=%s", name, &letStmt.Name)
+		t.Errorf("s.name not '%s'. got=%s", name, letStmt.Name)
 		return false
 	}
 
