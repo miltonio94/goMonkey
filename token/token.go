@@ -12,8 +12,9 @@ const (
 	EOF     = "EOF"
 
 	// Identifier + literals
-	IDENT = "INDENT"
-	INT   = "INT"
+	IDENT  = "INDENT"
+	INT    = "INT"
+	STRING = "STRING"
 
 	//Operators
 	ASSIGN   = "="
@@ -31,11 +32,14 @@ const (
 	// Delimiters
 	COMMA     = ","
 	SEMICOLON = ";"
+	COLON     = ":"
 
-	LPAREN = "("
-	RPAREN = ")"
-	LBRACE = "{"
-	RBRACE = "}"
+	LPAREN   = "("
+	RPAREN   = ")"
+	LBRACE   = "{"
+	RBRACE   = "}"
+	LBRACKET = "["
+	RBRACKET = "]"
 
 	// Keywords
 	FUNCTION = "FUNCTION"
